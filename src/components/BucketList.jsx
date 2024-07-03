@@ -1,4 +1,4 @@
-import { useState } from 'react';
+ import { useState } from 'react';
 import BucketForm from './BucketForm';
 import Bucket from './Bucket';
 
@@ -46,7 +46,7 @@ function BucketList() {
   };
 
   // Function to edit the bucket list item
-  const editBucketItem = (itemId, newValue) => {
+  const editBucketItem = (itemId, newValue) => { // pass in the item ID & the new value into editBucketItem
     // Make sure that the value isn't empty
     if (!newValue.text) {
       return;

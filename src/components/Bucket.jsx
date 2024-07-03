@@ -2,7 +2,7 @@ import { useState } from 'react';
 import BucketForm from './BucketForm';
 
 function Bucket(props) {
-  const [edit, setEdit] = useState({
+  const [edit, setEdit] = useState({ // We initialize the edit state with an object that has an id, value, and eagerness key
     id: null,
     value: '',
     eagerness: '',
@@ -34,6 +34,7 @@ function Bucket(props) {
       <div className="icons">
         {console.log(item)}
         <p onClick={() => setEdit({ id: item.id, value: item.text, eagerness: item.eagerness })}> ✏️</p>
+        {/* setEdit is a function that updates the edit state with the id, value, and eagerness of the item being edited */} 
         <p onClick={() => props.removeBucketItem(item.id)}> 🗑️</p>
       </div>
     </div>
